@@ -22,7 +22,7 @@ service_context = ServiceContext.from_defaults(llm=llm)
 index = VectorStoreIndex.from_vector_store(vector_store, storage_context=storage_context, service_context=service_context)
 
 # Create a query engine for business-related inquiries
-query_engine = index.as_query_engine(streaming=True, similarity_top_k=3)
+query_engine = index.as_query_engine(streaming=True, similarity_top_k=4)
 
 # Streamlit UI setup for the Business Guide Bot
 st.title("Hallands Företagsguide Bot 🤖")
